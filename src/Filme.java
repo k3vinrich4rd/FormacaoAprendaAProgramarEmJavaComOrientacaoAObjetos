@@ -9,5 +9,9 @@ public class Filme {
         boolean estaNoPlano = true;
         double notaDoFilme = 8.1;
         System.out.println("Nota do filme: " + notaDoFilme);
+
+
+        double media = notaDoFilme + 15.3;
+        System.out.printf("%.2f", media);
     }
 }

@@ -1,5 +1,7 @@
 package collectionselistas.project;
 
+import collectionselistas.project.modelos.Titulo;
+
 public class CalculadoraDeTempo {
     private int tempoTotal;
 

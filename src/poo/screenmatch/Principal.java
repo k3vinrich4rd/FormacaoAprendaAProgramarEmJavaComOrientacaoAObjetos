@@ -1,9 +1,10 @@
 package poo.screenmatch;
 
 import poo.screenmatch.calculo.CalculadoraDeTempo;
+import poo.screenmatch.calculo.FiltroDeRecomendacao;
+import poo.screenmatch.modelo.Episodio;
 import poo.screenmatch.modelo.Filme;
 import poo.screenmatch.modelo.Serie;
-import poo.screenmatch.primeirodesafio.calculadora.Calculadora;
 
 public class Principal {
     public static void main(String[] args) {
@@ -43,6 +44,15 @@ public class Principal {
         calculadora.inclui(outroFimel);
         calculadora.inclui(lost);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroDeRecomendacao filtroDeRecomendacao = new FiltroDeRecomendacao();
+        filtroDeRecomendacao.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacao(300);
+        filtroDeRecomendacao.filtra(episodio);
 
 
     }

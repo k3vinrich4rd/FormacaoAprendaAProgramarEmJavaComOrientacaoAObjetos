@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectStateService">
+    <option name="data">
+      <map>
+        <entry key="kevin.candido@zup.com.br">
+          <value>
+            <ProjectStateData>
+              <option name="conversationId" value="01JPW9971VEARBBJAAT5VWAJJB" />
+              <option name="indexedFiles">
+                <map>
+                  <entry key="$PROJECT_DIR$/src/Filme.java" value="22439" />
+                  <entry key="$PROJECT_DIR$/src/JogoAdivinha.java" value="41735" />
+                  <entry key="$PROJECT_DIR$/src/UtilizandoForComScanner.java" value="107133" />
+                  <entry key="$PROJECT_DIR$/src/desafio/Estudos.java" value="11223" />
+                  <entry key="$PROJECT_DIR$/src/desafio/Soma.java" value="13652" />
+                  <entry key="$PROJECT_DIR$/src/desafio/Subtracao.java" value="16183" />
+                  <entry key="$PROJECT_DIR$/src/poo/screenmatch/terceirodesafio/contabancaria/ContaCorrente.java" value="141665" />
+                  <entry key="$PROJECT_DIR$/src/poo/screenmatch/terceirodesafio/contabancaria/exception/SaldoInsuficienteException.java" value="87165" />
+                  <entry key="$PROJECT_DIR$/src/poo/screenmatch/terceirodesafio/numerosprimos/GeradorPrimo.java" value="142474" />
+                  <entry key="$PROJECT_DIR$/src/poo/screenmatch/terceirodesafio/numerosprimos/NumerosPrimos.java" value="142289" />
+                  <entry key="$PROJECT_DIR$/src/poo/screenmatch/terceirodesafio/numerosprimos/TesteNumerosPrimos.java" value="142516" />
+                  <entry key="$PROJECT_DIR$/src/poo/screenmatch/terceirodesafio/numerosprimos/VerificadorPrimo.java" value="142332" />
+                  <entry key="$PROJECT_DIR$/src/quartodesafio/Test.java" value="18064" />
+                  <entry key="$PROJECT_DIR$/src/quartodesafio/v2/ContaBancaria.java" value="22816" />
+                  <entry key="$PROJECT_DIR$/src/quartodesafio/v2/Operacao.java" value="19651" />
+                  <entry key="$PROJECT_DIR$/src/terceirodesafio/Calculadora.java" value="88485" />
+                  <entry key="$PROJECT_DIR$/src/terceirodesafio/CalculoFatorial.java" value="106182" />
+                  <entry key="$PROJECT_DIR$/src/terceirodesafio/ComparadorNumerico.java" value="65074" />
+                  <entry key="$PROJECT_DIR$/src/terceirodesafio/ImparOuPar.java" value="102776" />
+                  <entry key="$PROJECT_DIR$/src/terceirodesafio/PositivoOuNegativo.java" value="47212" />
+                  <entry key="$PROJECT_DIR$/src/terceirodesafio/Tabuada.java" value="96829" />
+                </map>
+              </option>
+              <option name="projectId" value="01JK65DDHV5PEPB6Z4ZAX4EBB3" />
+            </ProjectStateData>
+          </value>
+        </entry>
+        <entry key="unauthenticated">
+          <value>
+            <ProjectStateData>
+              <option name="projectId" value="01JM0DF4R408KSC5WMKA6AS34Y" />
+            </ProjectStateData>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

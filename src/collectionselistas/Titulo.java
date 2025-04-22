@@ -1,7 +1,11 @@
 package collectionselistas;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo>{
+    @SerializedName("Title")
     private String nome;
+    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -23,6 +27,12 @@ public class Titulo implements Comparable<Titulo>{
 
     public boolean isIncluidoNoPlano() {
         return incluidoNoPlano;
+    }
+
+    @Override
+    public String toString() {
+        return "nome='" + nome + '\'' +
+                ", anoDeLancamento=" + anoDeLancamento;
     }
 
     public int getDuracaoEmMinutos() {

@@ -6,12 +6,20 @@
         <entry key="kevin.candido@zup.com.br">
           <value>
             <ProjectStateData>
-              <option name="conversationId" value="01JRZCT4XMRRK4Y53B2E6AQH6P" />
+              <option name="conversationId" value="01JSJ9FCRSVZWJF9H5TS5ZZE27" />
               <option name="indexedFiles">
                 <map>
                   <entry key="$PROJECT_DIR$/src/Filme.java" value="22439" />
                   <entry key="$PROJECT_DIR$/src/JogoAdivinha.java" value="41735" />
                   <entry key="$PROJECT_DIR$/src/UtilizandoForComScanner.java" value="107133" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/JSONObject.java" value="21280" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/Pessoa.java" value="70476" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/TestPessoa.java" value="155818" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/TestPessoaConversaoParaObjeto.java" value="163165" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/TestPessoaConversaoParaObjetoFlexivel.java" value="159940" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/livro/Editora.java" value="244668" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/livro/TestLivroconversaoParaObjeto.java" value="250729" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/pessoa/Livro.java" value="184202" />
                   <entry key="$PROJECT_DIR$/src/desafio/Estudos.java" value="11223" />
                   <entry key="$PROJECT_DIR$/src/desafio/Soma.java" value="13652" />
                   <entry key="$PROJECT_DIR$/src/desafio/Subtracao.java" value="16183" />

@@ -1,7 +1,10 @@
 package consumindoapigravandoarquivoselidandocomerros;
 
 import collectionselistas.Titulo;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import poo.screenmatch.modelo.TituloOmdb;
 
 import java.io.IOException;
 import java.net.URI;
@@ -33,9 +36,18 @@ public class PrincipalComBusca {
         // Imprime o corpo da resposta no console
         System.out.println(json);
 
-        Gson gson = new Gson();
-        Titulo titulo = gson.fromJson(json, Titulo.class);
-        System.out.println(titulo);
+        //É possível fazer um builder com Gson
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+
+        System.out.println("Título provisório: ");
+        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+        System.out.println(meuTituloOmdb);
+
+        System.out.println("Meu título: ");
+        Titulo meuTitulo = new Titulo(meuTituloOmdb);
+        System.out.println(meuTitulo);
 
         input.close();
     }

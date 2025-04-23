@@ -16,7 +16,7 @@ public class IntegracaoApiGoogleBooks {
 
         var apiKey = "AIzaSyDVKrFnknOD1YlVEHwLd0To2EOzgB7GW-k";
 
-        var enderecoUri = "https://www.googleapis.com/books/v1/volumes?q=" + tituloDoLivro + "&key=" +apiKey;
+        var enderecoUri = "https://www.googleapis.com/books/v1/volumes?q=" + tituloDoLivro + "&key=" + apiKey;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(enderecoUri)).build();

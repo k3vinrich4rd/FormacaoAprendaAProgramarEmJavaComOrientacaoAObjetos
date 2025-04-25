@@ -4,6 +4,7 @@ import collectionselistas.Titulo;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.exception.ErrorDeConversaDeAnoException;
 import poo.screenmatch.modelo.TituloOmdb;
 
 import java.io.IOException;
@@ -19,35 +20,47 @@ public class PrincipalComBusca {
         Scanner input = new Scanner(System.in);
         System.out.print("Digite o filme que deseja buscar: ");
         var filmeDigitado = input.nextLine();
-        var enderecoUri = "https://www.omdbapi.com/?t=" + filmeDigitado + "&apikey=2367b394";
+        var enderecoUri = "https://www.omdbapi.com/?t=" + filmeDigitado.replace(" ", "+") + "&apikey=2367b394";
 
-        // Cria um cliente HTTP para enviar requisições
-        HttpClient client = HttpClient.newHttpClient();
-        // Constrói uma requisição HTTP do tipo GET para a URL especificada
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(enderecoUri)) // Define o URI da API OMDB com o filme "Matrix" e a chave de API
-                .build(); // Finaliza a construção da requisição
+        try {
+            // Cria um cliente HTTP para enviar requisições
+            HttpClient client = HttpClient.newHttpClient();
+            // Constrói uma requisição HTTP do tipo GET para a URL especificada
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(enderecoUri)) // Define o URI da API OMDB com o filme "Matrix" e a chave de API
+                    .build(); // Finaliza a construção da requisição
 
-        // Envia a requisição e obtém a resposta como uma string
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());//O segundo parâmetro, HttpResponse.BodyHandlers.ofString(), indica que o corpo da resposta será tratado como uma string.
+            // Envia a requisição e obtém a resposta como uma string
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());//O segundo parâmetro, HttpResponse.BodyHandlers.ofString(), indica que o corpo da resposta será tratado como uma string.
 
 
-        String json = response.body();
-        // Imprime o corpo da resposta no console
-        System.out.println(json);
+            String json = response.body();
+            // Imprime o corpo da resposta no console
+            System.out.println(json);
 
-        //É possível fazer um builder com Gson
-        Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                .create();
+            //É possível fazer um builder com Gson
+            Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                    .create();
 
-        System.out.println("Título provisório: ");
-        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
-        System.out.println(meuTituloOmdb);
+            System.out.println("Título provisório: ");
+            TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+            System.out.println(meuTituloOmdb);
 
-        System.out.println("Meu título: ");
-        Titulo meuTitulo = new Titulo(meuTituloOmdb);
-        System.out.println(meuTitulo);
+//        try {
+            Titulo meuTitulo = new Titulo(meuTituloOmdb);
+            System.out.println("Meu título: ");
+            System.out.println(meuTitulo);
+        } catch (NumberFormatException e) {
+            System.out.println("Aconteceu um erro: " + e.getMessage());
+        }catch (IllegalArgumentException e) {
+            System.out.println("Algum erro de argumento na busca, verifique o endereço");
+        }catch (ErrorDeConversaDeAnoException errorDeConversaDeAnoException) {
+            System.out.println(errorDeConversaDeAnoException.getMessage());
+        }
+
+        System.out.println("O programa finalizou corretamente");
+
 
         input.close();
     }

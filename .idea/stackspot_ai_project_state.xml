@@ -6,20 +6,25 @@
         <entry key="kevin.candido@zup.com.br">
           <value>
             <ProjectStateData>
-              <option name="conversationId" value="01JSJ9FCRSVZWJF9H5TS5ZZE27" />
+              <option name="conversationId" value="01JSP89HY887QSC0W2JYR8MN3C" />
               <option name="indexedFiles">
                 <map>
                   <entry key="$PROJECT_DIR$/src/Filme.java" value="22439" />
                   <entry key="$PROJECT_DIR$/src/JogoAdivinha.java" value="41735" />
                   <entry key="$PROJECT_DIR$/src/UtilizandoForComScanner.java" value="107133" />
+                  <entry key="$PROJECT_DIR$/src/collectionselistas/Titulo.java" value="255090" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/JSONObject.java" value="21280" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/Pessoa.java" value="70476" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/TestPessoa.java" value="155818" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/TestPessoaConversaoParaObjeto.java" value="163165" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/TestPessoaConversaoParaObjetoFlexivel.java" value="159940" />
-                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/livro/Editora.java" value="244668" />
-                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/livro/TestLivroconversaoParaObjeto.java" value="250729" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/livro/Editora.java" value="252004" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/livro/TestLivroconversaoParaObjeto.java" value="254517" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/pessoa/Livro.java" value="184202" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/terceirodesafio/DivisaoSimples.java" value="19127" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/terceirodesafio/SenhaInvalidaException.java" value="33016" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/terceirodesafio/UsuarioESenha.java" value="39637" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/terceirodesafio/enums/ExceptionsEnum.java" value="43455" />
                   <entry key="$PROJECT_DIR$/src/desafio/Estudos.java" value="11223" />
                   <entry key="$PROJECT_DIR$/src/desafio/Soma.java" value="13652" />
                   <entry key="$PROJECT_DIR$/src/desafio/Subtracao.java" value="16183" />
@@ -47,7 +52,7 @@
         <entry key="unauthenticated">
           <value>
             <ProjectStateData>
-              <option name="projectId" value="01JM0DF4R408KSC5WMKA6AS34Y" />
+              <option name="projectId" value="01JSP88W3Q3S0EWQZQMG2VNMTB" />
             </ProjectStateData>
           </value>
         </entry>

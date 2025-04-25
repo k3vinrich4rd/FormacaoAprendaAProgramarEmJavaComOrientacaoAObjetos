@@ -1,12 +1,11 @@
 package collectionselistas;
 
-import com.google.gson.annotations.SerializedName;
+import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.enums.ExceptionsEnums;
+import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.exception.ErrorDeConversaDeAnoException;
 import poo.screenmatch.modelo.TituloOmdb;
 
 public class Titulo implements Comparable<Titulo> {
-    @SerializedName("Title")
     private String nome;
-    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -20,6 +19,9 @@ public class Titulo implements Comparable<Titulo> {
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+        if (meuTituloOmdb.year().length() > 4) {
+            throw new ErrorDeConversaDeAnoException(ExceptionsEnums.CONVERSAO_DE_ANO.getMessage());
+        }
         this.anoDeLancamento = Integer.parseInt(meuTituloOmdb.year());
         this.duracaoEmMinutos = Integer.parseInt(meuTituloOmdb.runtime().substring(0, 2));
     }

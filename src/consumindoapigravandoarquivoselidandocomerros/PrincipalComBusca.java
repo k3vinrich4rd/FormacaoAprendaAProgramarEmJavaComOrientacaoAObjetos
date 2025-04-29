@@ -7,6 +7,7 @@ import com.google.gson.GsonBuilder;
 import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.exception.ErrorDeConversaDeAnoException;
 import poo.screenmatch.modelo.TituloOmdb;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -47,10 +48,18 @@ public class PrincipalComBusca {
             TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
             System.out.println(meuTituloOmdb);
 
+
+
 //        try {
             Titulo meuTitulo = new Titulo(meuTituloOmdb);
             System.out.println("Meu título: ");
             System.out.println(meuTitulo);
+
+
+            FileWriter escrita = new FileWriter("filmes.txt");
+            escrita.write(meuTitulo.toString());
+            escrita.close();
+
         } catch (NumberFormatException e) {
             System.out.println("Aconteceu um erro: " + e.getMessage());
         }catch (IllegalArgumentException e) {

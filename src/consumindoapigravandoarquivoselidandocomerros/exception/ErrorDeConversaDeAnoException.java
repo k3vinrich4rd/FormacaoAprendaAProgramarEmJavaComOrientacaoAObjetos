@@ -1,4 +1,4 @@
-package consumindoapigravandoarquivoselidandocomerros.terceirodesafio.exception;
+package consumindoapigravandoarquivoselidandocomerros.exception;
 
 public class ErrorDeConversaDeAnoException extends RuntimeException {
 

@@ -10,7 +10,7 @@ import java.io.FileWriter;
 import collectionselistas.Titulo;
 import com.google.gson.*;
 import com.google.gson.FieldNamingPolicy;
-import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.exception.ErrorDeConversaDeAnoException;
+import consumindoapigravandoarquivoselidandocomerros.exception.ErrorDeConversaDeAnoException;
 import poo.screenmatch.modelo.TituloOmdb;
 
 public class BuscaFilme {
@@ -40,6 +40,7 @@ public class BuscaFilme {
 
             Gson gson = new GsonBuilder()
                     .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                    .setPrettyPrinting()
                     .create();
 
             System.out.println("Título provisório: ");

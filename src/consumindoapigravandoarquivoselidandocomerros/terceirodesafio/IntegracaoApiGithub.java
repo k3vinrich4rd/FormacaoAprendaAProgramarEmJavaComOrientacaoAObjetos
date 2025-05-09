@@ -1,7 +1,7 @@
 package consumindoapigravandoarquivoselidandocomerros.terceirodesafio;
 
-import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.enums.ExceptionsEnums;
-import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.exception.ErroConsultaGitHubException;
+import consumindoapigravandoarquivoselidandocomerros.enums.ExceptionsEnums;
+import consumindoapigravandoarquivoselidandocomerros.exception.ErroConsultaGitHubException;
 
 import java.io.IOException;
 import java.net.URI;

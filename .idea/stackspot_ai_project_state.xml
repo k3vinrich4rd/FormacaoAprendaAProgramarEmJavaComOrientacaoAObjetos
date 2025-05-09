@@ -6,13 +6,18 @@
         <entry key="kevin.candido@zup.com.br">
           <value>
             <ProjectStateData>
-              <option name="conversationId" value="01JT0KTYV754NV2DF3HT26JN4C" />
+              <option name="conversationId" value="01JTNPQBZPA0XGRAEE93KR2YNH" />
               <option name="indexedFiles">
                 <map>
                   <entry key="$PROJECT_DIR$/src/Filme.java" value="22439" />
                   <entry key="$PROJECT_DIR$/src/JogoAdivinha.java" value="41735" />
                   <entry key="$PROJECT_DIR$/src/UtilizandoForComScanner.java" value="107133" />
                   <entry key="$PROJECT_DIR$/src/collectionselistas/Titulo.java" value="255090" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/exception/ErroMauPreenchidaApiViaCepException.java" value="76646" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/quintodesafio/CepService.java" value="269036" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/quintodesafio/CepTest.java" value="375905" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/quintodesafio/Endereco.java" value="315958" />
+                  <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/quintodesafio/IntegracaoApiViaCep.java" value="348054" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/JSONObject.java" value="21280" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/Pessoa.java" value="70476" />
                   <entry key="$PROJECT_DIR$/src/consumindoapigravandoarquivoselidandocomerros/segundodesafio/TestPessoa.java" value="155818" />

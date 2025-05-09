@@ -1,1 +1,1 @@
-nome='Matrix', anoDeLancamento=1993, duração: 60
+(nome = Matrix', anoDeLancamento = 1993, duração == 60)

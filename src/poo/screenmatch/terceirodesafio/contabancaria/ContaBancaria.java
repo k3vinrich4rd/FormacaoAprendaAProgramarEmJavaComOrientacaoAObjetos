@@ -6,7 +6,7 @@ que herda da classe ContaBancaria. Adicione um método específico para a subcla
 como cobrarTarifaMensal(), que desconta uma tarifa mensal da conta corrente. */
 
 
-import poo.screenmatch.terceirodesafio.contabancaria.exception.SaldoInsuficienteException;
+import consumindoapigravandoarquivoselidandocomerros.exception.SaldoInsuficienteException;
 
 public class ContaBancaria {
 

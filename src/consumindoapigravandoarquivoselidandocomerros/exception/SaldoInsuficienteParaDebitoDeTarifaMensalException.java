@@ -1,4 +1,4 @@
-package poo.screenmatch.terceirodesafio.contabancaria.exception;
+package consumindoapigravandoarquivoselidandocomerros.exception;
 
 public class SaldoInsuficienteParaDebitoDeTarifaMensalException extends RuntimeException {
     public SaldoInsuficienteParaDebitoDeTarifaMensalException(String message) {

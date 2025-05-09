@@ -1,7 +1,7 @@
 package collectionselistas;
 
-import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.enums.ExceptionsEnums;
-import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.exception.ErrorDeConversaDeAnoException;
+import consumindoapigravandoarquivoselidandocomerros.enums.ExceptionsEnums;
+import consumindoapigravandoarquivoselidandocomerros.exception.ErrorDeConversaDeAnoException;
 import poo.screenmatch.modelo.TituloOmdb;
 
 public class Titulo implements Comparable<Titulo> {
@@ -40,9 +40,9 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "nome='" + nome + '\'' +
-                ", anoDeLancamento=" + anoDeLancamento
-                + ", duração: " + duracaoEmMinutos;
+        return "(nome = " + nome + '\'' +
+                ", anoDeLancamento = " + anoDeLancamento
+                + ", duração == " + duracaoEmMinutos + ")";
     }
 
     public int getDuracaoEmMinutos() {

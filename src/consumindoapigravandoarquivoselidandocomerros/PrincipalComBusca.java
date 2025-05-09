@@ -4,7 +4,7 @@ import collectionselistas.Titulo;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import consumindoapigravandoarquivoselidandocomerros.terceirodesafio.exception.ErrorDeConversaDeAnoException;
+import consumindoapigravandoarquivoselidandocomerros.exception.ErrorDeConversaDeAnoException;
 import poo.screenmatch.modelo.TituloOmdb;
 
 import java.io.FileWriter;
@@ -13,61 +13,82 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Digite o filme que deseja buscar: ");
-        var filmeDigitado = input.nextLine();
-        var enderecoUri = "https://www.omdbapi.com/?t=" + filmeDigitado.replace(" ", "+") + "&apikey=2367b394";
 
-        try {
-            // Cria um cliente HTTP para enviar requisições
-            HttpClient client = HttpClient.newHttpClient();
-            // Constrói uma requisição HTTP do tipo GET para a URL especificada
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(enderecoUri)) // Define o URI da API OMDB com o filme "Matrix" e a chave de API
-                    .build(); // Finaliza a construção da requisição
+        String busca = "";
 
-            // Envia a requisição e obtém a resposta como uma string
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());//O segundo parâmetro, HttpResponse.BodyHandlers.ofString(), indica que o corpo da resposta será tratado como uma string.
+        List<Titulo> titulos = new ArrayList<>();
+
+        //É possível fazer um builder com Gson
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .setPrettyPrinting()
+                .setPrettyPrinting()
+                .create();
+
+        while (!busca.equalsIgnoreCase("sair")) {
+
+            System.out.println("Digite o filme que deseja buscar: ");
+            busca = input.nextLine();
 
 
-            String json = response.body();
-            // Imprime o corpo da resposta no console
-            System.out.println(json);
+            if (busca.equalsIgnoreCase("sair")) {
+                break;
 
-            //É possível fazer um builder com Gson
-            Gson gson = new GsonBuilder()
-                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                    .create();
+            }
 
-            System.out.println("Título provisório: ");
-            TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
-            System.out.println(meuTituloOmdb);
 
+            var enderecoUri = "https://www.omdbapi.com/?t=" + busca.replace(" ", "+") + "&apikey=2367b394";
+
+            try {
+                // Cria um cliente HTTP para enviar requisições
+                HttpClient client = HttpClient.newHttpClient();
+                // Constrói uma requisição HTTP do tipo GET para a URL especificada
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(enderecoUri)) // Define o URI da API OMDB com o filme "Matrix" e a chave de API
+                        .build(); // Finaliza a construção da requisição
+
+                // Envia a requisição e obtém a resposta como uma string
+                HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());//O segundo parâmetro, HttpResponse.BodyHandlers.ofString(), indica que o corpo da resposta será tratado como uma string.
+
+
+                String json = response.body();
+                // Imprime o corpo da resposta no console
+                System.out.println(json);
+
+
+
+                System.out.println("Título provisório: ");
+                TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+                System.out.println(meuTituloOmdb);
 
 
 //        try {
-            Titulo meuTitulo = new Titulo(meuTituloOmdb);
-            System.out.println("Meu título: ");
-            System.out.println(meuTitulo);
+                Titulo meuTitulo = new Titulo(meuTituloOmdb);
+                System.out.println("Meu título: ");
+                System.out.println(meuTitulo);
 
-
-            FileWriter escrita = new FileWriter("filmes.txt");
-            escrita.write(meuTitulo.toString());
-            escrita.close();
-
-        } catch (NumberFormatException e) {
-            System.out.println("Aconteceu um erro: " + e.getMessage());
-        }catch (IllegalArgumentException e) {
-            System.out.println("Algum erro de argumento na busca, verifique o endereço");
-        }catch (ErrorDeConversaDeAnoException errorDeConversaDeAnoException) {
-            System.out.println(errorDeConversaDeAnoException.getMessage());
+                titulos.add(meuTitulo);
+            } catch (NumberFormatException e) {
+                System.out.println("Aconteceu um erro: " + e.getMessage());
+            } catch (IllegalArgumentException e) {
+                System.out.println("Algum erro de argumento na busca, verifique o endereço");
+            } catch (ErrorDeConversaDeAnoException errorDeConversaDeAnoException) {
+                System.out.println(errorDeConversaDeAnoException.getMessage());
+            }
         }
+        System.out.println(titulos);
 
+        FileWriter escrita = new FileWriter("filmes.json");
+        escrita.write(gson.toJson(titulos));
+        escrita.close();
         System.out.println("O programa finalizou corretamente");
 
 
